@@ -1,0 +1,25 @@
+header, footer {
+  padding: 20px;
+  background-color: #BC4639;
+}
+
+img {
+  width: 100px;
+  margin-top: 10px;
+}
+
+button {
+  width: 150px;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: right;
+}
+
+.remove {
+  text-align: center;
+  /* align-items: center; */
+}
