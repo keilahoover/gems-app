@@ -1,7 +1,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('products', function(table){
     table.increments();
-    table.integer('pid').notNull();
+    table.bigInteger('pid').notNull();
     table.boolean('hasPic').notNull();
     table.specificType('price', 'char(20)').notNull();
     table.text('title', 255).notNull().defaultTo('No Title');

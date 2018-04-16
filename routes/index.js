@@ -4,14 +4,14 @@ var router = express.Router();
 
 var craigslist = require('node-craigslist'),
   client = new craigslist.Client({
-    city : ''
+    city : 'boulder'
   });
 
 client
   .list()
   .then((listings) => {
     // play with listings here...
-    listings.forEach((listing) => console.log(listing));
+    // listings.forEach((listing) => console.log(listing));
   })
   .catch((err) => {
     console.error(err);
