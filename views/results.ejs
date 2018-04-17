@@ -10,13 +10,19 @@
       <% include ./header %>
     </header>
     <main>
-
-      <div class="row">
-        <% include ./sidenav %>
-        <div class="col-lg-7">
-        <!-- <% for (let i = 0; i < allAuthors.length; i++) { %>
-          <% include ./one-author %>
-        <% } %> -->
+      <main role="main">
+        <!-- <% for (let i = 0; i < products.length; i++) { %> -->
+        <article class="card">
+              <div class="top-line"></div>
+              <div class="bottom-line">
+                <h3 class="product-title">Title</h3>
+                <h4 class="product-price">$$$</h4>
+                <button class="product-url"><a class="card-url" title="attachment-link" href="https://seattle.craigslist.org/oly/atq/d/vintage-copper-canisters-make/6552292985.html">More details...</a></button>
+                <button class="wishlist-btn">Add to Wishlist</button>
+              </div>
+            </article>
+      </main>
+        <!-- <% } %> -->
         </div>
       </div>
     </main>
@@ -26,3 +32,25 @@
 
   </body>
 </html>
+
+
+<div class="row justify-content-md-center">
+  <div class="author-cover col col-lg-3">
+    <div class="portrait-border">
+      <img class="portrait" src= "<%= allAuthors[i].portrait_url %>" alt="author-portrait">
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="row author-row">
+      <p id="author-one" class="author"><%= allAuthors[i].first_name %></p>
+      <p id="author-one" class="author"><%= allAuthors[i].last_name %></p>
+      <button type="submit" class="edit-button btn btn-primary" >Edit</button>
+      <button type="button" class="btn btn-sm btn-danger remove-button">Delete</button>
+    </div>
+    <div class="row biography-row">
+      <p class="biography"><%= allAuthors[i].biography %></p>
+    </div>
+  </div>
+</div>
+<div class="spacer">
+</div>

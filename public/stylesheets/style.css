@@ -1,3 +1,9 @@
+/* General Styles */
+html {
+  font-size: 10px;
+}
+
+/* Homepage */
 /*Results Cards*/
 main {
   max-width: 100%;
@@ -18,7 +24,7 @@ main {
 
 .card {
   background-color: #FBFAF8;
-  max-width: 22%;
+  width: 22%;
   margin: 3.3rem 1.2rem 1.2rem 1.2rem;
   height: 36rem;
   display: flex;
