@@ -14,7 +14,7 @@ router.get('/', (req, res, next) => {
   res.send('this is where users sign up for an account');
 });
 
-/*POST adding an account */
+/*POST sign up */
 
 router.post('/' , (req,res,next) => {
   let hashed = bcrypt.hashSync(req.body.password, 8);
