@@ -6,8 +6,10 @@ header {
   background-color: #631A0F;
   color: #F6DFDB;
   width: 100%;
+  text-align: center;
+  height: 100vh;
 }
 
-h1 {
+ {
   font-family: 'Comfortaa', cursive;
 }
