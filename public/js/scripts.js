@@ -10,14 +10,12 @@
 $(document).ready(function() {
   console.log('ready to go ');
 
-
-  // $('#log-in').click(function() {
+  // $('#user-wishlist').click(function() {
   //   event.preventDefault()
-  //
-  //     console.log('you clicked on login button');
-  //
-  //
+  //   console.log("you clicked me bro");
   // })
+
+
 
 
   $('#sign-up').click(function() {
