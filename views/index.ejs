@@ -9,6 +9,16 @@
     <header>
       <% include ./header %>
     </header>
+    <div id=logIn>
+      <div class="input-field">
+        <input placeholder="Email" id="email" type="text" class="validate">
+      </div>
+      <div class="input-field">
+        <input placeholder="Password" id="password" type="password" class="validate">
+      </div>
+       <button class="input-field waves-effect waves-light btn-large" type="submit" name="action">Log in</button>
+    </div>
+    <a href="registration.ejs" class="button">Register</a>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -57,19 +67,12 @@
     </div>
     <!-- Testing result card layout -->
     <main role="main">
-    <article class="card">
-          <div class="top-line"></div>
-          <div class="bottom-line">
-            <h3 class="product-title">Title</h3>
-            <h4 class="product-price">$$$</h4>
-            <button class="product-url"><a class="card-url" title="attachment-link" target="_blank" href="https://seattle.craigslist.org/oly/atq/d/vintage-copper-canisters-make/6552292985.html">More details...</a></button>
-            <button class="wishlist-btn">Add to Wishlist</button>
-          </div>
-        </article>
+
     </main>
 
     <footer>
       <% include ./footer %>
     </footer>
 
-</body>
+  </body>
+</html>
