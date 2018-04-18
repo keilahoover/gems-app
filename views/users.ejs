@@ -1,20 +1,57 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-      <% include ./head %>
-      <link rel='stylesheet' href='/stylesheets/style.css'/>
-      <link rel='stylesheet' href='/stylesheets/carousel.css'/>
+    <% include ./head %>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel='stylesheet' href='/stylesheets/users.css' />
+      <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
   </head>
+
   <body>
     <header>
       <% include ./header %>
     </header>
     <main>
-      <h1>SIGN UP</h1>
+      <form class="form">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 id="SUheading">Sign Up</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <input class="form-control" name="first_name" type="text" placeholder="First Name" required/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <input class="form-control" name="last_name" type="text" placeholder="Last Name" required/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <input class="form-control" name="email" type="email" placeholder="Email Address" required/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <input class="form-control" name="password" type="text" placeholder="Password" required/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button type="submit" id='sign-up'>Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </form>
     </main>
     <footer>
       <% include ./footer %>
     </footer>
 
   </body>
+
 </html>

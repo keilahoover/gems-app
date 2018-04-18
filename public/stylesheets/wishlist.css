@@ -1,25 +1,35 @@
 #main-container {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap;*/
+}
+
+h1 {
+  padding: 50px;
 }
 
 #settings-container {
   border: 1px solid #BC4639;
   border-radius: 15px;
+  box-shadow: 3px 3px #D4A59A;!
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding: 20px 20px 100px 20px;
   margin-left: 20px;
   margin-right: 50px;
+  margin-bottom: 80px;
 }
 
-#delete, a {
-  border-radius: 15px;
+#delete-user, a {
+  /* border-radius: 15px; */
+  text-align: center;
+  padding: 0;
 }
 
-#delete {
+#delete-user {
   background-color: #BC4639;
+  margin-top: 70px;
 }
 
 #item-container {
@@ -34,8 +44,11 @@
   border-radius: 15px;
   margin-left: 10px;
   margin-right: 10px;
-  text-align: center;
-  height: 30%;
+  display: flex;
+  align-content: center;
+  /* justify-content: center; */
+  /* text-align: center; */
+  /* height: 30%; */
   /* width: 30px; */
   padding: 30px;
 }
@@ -49,9 +62,4 @@ button {
   width: 100px;
 }
 
-
-#4285F4
-#5C2018
-#BC4639
-#D4A59A
-#F3E0DC
+#4285F4 #5C2018 #BC4639 #D4A59A #F3E0DC
