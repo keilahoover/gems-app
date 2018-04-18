@@ -37,4 +37,24 @@ router.post('/' , (req,res,next) => {
 
 })
 
+router.delete('/', (req, res, next) => {
+  if (req.cookies.token) {
+    let token = jwt.decode(req.cookies.token)
+    knex('users')
+      .where('id', token.id)
+      .del()
+      .returning('*')
+      .then(data => {
+        res.json(humps.camelizeKeys(data[0]))
+
+      })
+
+  } else {
+    res.status(401).type('text/plain').send('Unauthorized')
+  }
+
+})
+
+
+
 module.exports = router;

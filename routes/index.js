@@ -1,4 +1,4 @@
-//most recent version 
+//most recent version
 
 'use strict';
 
@@ -29,42 +29,30 @@ router.post('/', (req, res, next) => {
           lastName: data[0].last_name,
           email: data[0].email
         }
-
-
-
         bcrypt.compare(req.body.password, data[0].hashed_password)
-          .then((result) => {
+        .then((result) => {
+          if (result === true && req.body.email === data[0].email) {
+            let signedUser = jwt.sign(user, KEY)
 
+            res.cookie('token', signedUser, {
+              path: '/',
+              httpOnly: true
+            })
+            res.send('youre logged in')
+          } else {
+            // log
+            res.status(400).type('text/plain')
+            .send("Bad email or password")
+          }
 
-            if (result === true && req.body.email === data[0].email) {
-
-
-
-              let signedUser = jwt.sign(user, KEY)
-
-              res.cookie('token', signedUser, {
-                  path: '/',
-                  httpOnly: true
-                })
-
-
-             res.send('youre logged in')
-            } else {
-              // log
-              res.status(400).type('text/plain')
-                .send("Bad email or password")
-
-            }
-
-          })
-          .catch((err) => `>>> CRAAAAAAAPPPPPPPPPPP ${err}`)
+        })
+        .catch((err) => `>>> CRAAAAAAAPPPPPPPPPPP ${err}`)
       } else {
         res.status(400).type('text/plain')
-          .send("Bad email or password")
+        .send("Bad email or password")
       }
 
     })
     .catch((err) => `>>> CRAAAAAAAPPPPPPPPPPP ${err}`)
-})
-
-module.exports = router;
+  })
+  module.exports = router;

@@ -6,18 +6,6 @@ const humps = require('humps');
 const knex = require('../knex');
 const jwt = require('jsonwebtoken');
 
-// const authorized = (req, res, next) => {
-//   if (req.cookies.token) {
-//     jwt.verify(req.cookies.token, process.env.JWT_KEY, err, payload) => {
-//       if (err) next (err)
-//       req.token = payload
-//     })
-//   } else {
-//     next ({output: { statusCode: 401 }, message: 'Unauthorized'})
-//   }
-//   next()
-// }
-
 router.get('/', (req, res, next) => {
   // console.log(req.params);
   knex('wishlist')
@@ -29,25 +17,6 @@ router.get('/', (req, res, next) => {
   })
   .catch((err) => console.log('err: ', err))
 });
-
-
-// wait until cards are generated?
-
-// router.get('/check/:id', (req, res, next) => {
-//   knex('wishlist')
-//   .where('id', req.params.pid)
-//   .join('products', 'wishlist.products_id', 'products.id')
-//   .select('*')
-//   .returning('*')
-//   .then((result) => {
-//     // console.log('result :', result);
-//     if (result.length === 0) {
-//       res.json(false)
-//     } else if (req.query.products === result[0].products_id) {
-//       s.json(true)
-//     }
-//   })
-// })
 
 router.post('/', (req, res, next) => {
   // const token = jwt.decode(req.cookies.token)
@@ -73,5 +42,7 @@ router.delete('/', (req, res, next) => {
     res.json(wishDeleted[0]);
   })
 })
+
+
 
 module.exports = router;
