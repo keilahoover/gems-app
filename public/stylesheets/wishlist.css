@@ -18,7 +18,7 @@ h1 {
   padding: 20px 20px 100px 20px;
   margin-left: 20px;
   margin-right: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 #delete-user, a {
@@ -29,6 +29,7 @@ h1 {
 
 #delete-user {
   background-color: #BC4639;
+  margin-top: 70px;
 }
 
 #item-container {
