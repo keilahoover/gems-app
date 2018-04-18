@@ -10,8 +10,20 @@
 $(document).ready(function() {
   console.log('ready to go ');
 
-  $('#email').click(function() {
+
+  // $('#log-in').click(function() {
+  //   event.preventDefault()
+  //
+  //     console.log('you clicked on login button');
+  //
+  //
+  // })
+
+
+  $('#sign-up').click(function() {
+    event.preventDefault()
     console.log('clicked me');
+
   })
 
 })

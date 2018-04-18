@@ -5,24 +5,52 @@
   <% include ./head %>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/carousel.css' />
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
-    <script src='/js/scripts.js'></script>
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <script src = '/js/scripts.js'></script>
 </head>
 
 <body>
   <header>
     <% include ./header %>
   </header>
-  <div id=logIn>
-    <div class="input-field">
-      <input placeholder="Email" id="email" type="text" class="validate">
+  <div id="upper">
+    <% if (typeof signinSuccess === 'undefined') { %>
+      <form class="form" method="POST" action="/">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <input class="form-control" name="email" type="text" placeholder="Email" required />
+            </div>
+            <div class="col-md-4">
+              <input class="form-control" name="password" type="password" placeholder="Password" required />
+            </div>
+            <div class="col-md-2">
+              <button type="submit" id='log-in'>Log-in</button>
+            </div>
+            <div class="col-md-2">
+              <button id="sign-up">Sign-up</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    <% } %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <button class="nav">Antiqes</button>
+        </div>
+        <div class="col-md-3">
+          <button class="nav">Books</button>
+        </div>
+        <div class="col-md-3">
+          <button class="nav">Collectibles</button>
+        </div>
+        <div class="col-md-3">
+          <button class="nav">Video Games</button>
+        </div>
+      </div>
     </div>
-    <div class="input-field">
-      <input placeholder="Password" id="password" type="password" class="validate">
-    </div>
-    <button class="input-field waves-effect waves-light btn-large" type="submit" name="action">Log in</button>
   </div>
-  <a href="registration.ejs" class='button'>Register</a>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -53,7 +81,7 @@
         <img class="third-slide" src="../images/video_game_carousel.png" alt="Third slide">
         <div class="container">
           <div class="carousel-caption text-right">
-            <h1>Video Gaming</h1>
+            <h1>Video Games</h1>
             <p></p>
           </div>
         </div>
@@ -71,7 +99,51 @@
   </div>
   <!-- Testing result card layout -->
   <main role="main">
+    <div class="container marketing">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>Catagories</h2>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="catagory">Antiques</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="catagory">Books</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="catagory">Collectibles</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="catagory">Video Games</button>
+                </div>
+              </div>
+              </div>
+          </div>
 
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <h2>About Us</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <h2>Community</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <!-- /.col-lg-4 -->
+      </div>
+    </div>
+      <!-- /.row -->
   </main>
 
   <footer>

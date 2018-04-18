@@ -11,7 +11,7 @@ const KEY = process.env.JWT_KEY
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-/* GET to the home page. */
+
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'GEMS' });
  })
@@ -38,7 +38,8 @@ router.post('/', (req, res, next) => {
               path: '/',
               httpOnly: true
             })
-            res.send('youre logged in')
+
+            res.render('index', { title: 'GEMS', signinSuccess: true });
           } else {
             // log
             res.status(400).type('text/plain')
