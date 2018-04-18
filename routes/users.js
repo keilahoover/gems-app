@@ -11,12 +11,12 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 
-/* GET users listing. */
+/* GET to sign up page. */
 router.get('/', (req, res, next) => {
   res.send('this is where users sign up for an account');
 });
 
-/*POST sign up */
+/*POST sign up/create account */
 
 router.post('/' , (req,res,next) => {
   let hashed = bcrypt.hashSync(req.body.password, 8);
@@ -37,23 +37,23 @@ router.post('/' , (req,res,next) => {
 
 })
 
-router.delete('/', (req, res, next) => {
-  if (req.cookies.token) {
-    let token = jwt.decode(req.cookies.token)
-    knex('users')
-      .where('id', token.id)
-      .del()
-      .returning('*')
-      .then(data => {
-        res.json(humps.camelizeKeys(data[0]))
-
-      })
-
-  } else {
-    res.status(401).type('text/plain').send('Unauthorized')
-  }
-
-})
+// router.delete('/', (req, res, next) => {
+//   if (req.cookies.token) {
+//     let token = jwt.decode(req.cookies.token)
+//     knex('users')
+//       .where('id', token.id)
+//       .del()
+//       .returning('*')
+//       .then(data => {
+//         res.json(humps.camelizeKeys(data[0]))
+//
+//       })
+//
+//   } else {
+//     res.status(401).type('text/plain').send('Unauthorized')
+//   }
+//
+// })
 
 
 
