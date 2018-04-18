@@ -1,20 +1,26 @@
 footer {
-  background-color: #631A0F;
-  color: #F6DFDB;
+  background-color: #241F24;
+  /* color: #F2F1F0; */
   width: 100%;
-  height: 30px;
-  position: absolute;
+  height: 35vh;
 }
 
 #footer-container {
-  background-color: #631A0F;
+  font-size: 1.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
-.about-us {
-  background-color: #631A0F;
+#footer__a,
+.copyright {
+  color: #FFFFFF;
+  background-color: #241F24;
+  padding: 0;
+  margin: 60px;
+}
+
+/* .about-us {
   color: #F6DFDB;
   font-size: 12px;
   padding: 0;
@@ -23,17 +29,10 @@ footer {
 
 
 .home {
-  background-color: #631A0F;
-  border-radius: 50%;
-  /* justify-content: center;
-  align-items: center; */
+  background-color: #241F24;
   margin-left: 250px;
   margin-right: 250px;
   padding: 0;
-}
-
-img, .home {
-  width: 100px;
 }
 
 p {
@@ -41,4 +40,4 @@ p {
   font-size: 12px;
   padding: 0;
   margin: 0;
-}
+} */
