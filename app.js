@@ -6,12 +6,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 require('dotenv').config(); // require and init
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var resultsRouter = require('./routes/results');
 var wishlistRouter = require('./routes/wishlist');
-
 var app = express();
 
 // view engine setup
@@ -33,6 +31,10 @@ app.use('/wishlist', wishlistRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+//handling the delete button \
+
+
 
 // error handler
 app.use(function(err, req, res, next) {
