@@ -3,13 +3,15 @@ body {
 }
 
 header {
-  background-color: #631A0F;
-  color: #F6DFDB;
+  background-color: #241F24;
+  color: #F2F1F0;
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
   text-align: center;
-  height: 20vh;
+  height: 35vh;
 }
 
- {
-  font-family: 'Comfortaa', cursive;
+.header__h1 {
+  font-size: 6rem;
+  padding-top: 25px;
 }

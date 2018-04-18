@@ -38,7 +38,8 @@ router.post('/', (req, res, next) => {
               path: '/',
               httpOnly: true
             })
-            res.send('youre logged in')
+
+            res.render('index', { title: 'GEMS', signinSuccess: true });
           } else {
             // log
             res.status(400).type('text/plain')

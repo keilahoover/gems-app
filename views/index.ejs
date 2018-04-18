@@ -6,6 +6,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel='stylesheet' href='/stylesheets/carousel.css' />
     <link rel='stylesheet' href='/stylesheets/index.css' />
+    <script src = '/js/scripts.js'></script>
 </head>
 
 <body>
@@ -13,24 +14,26 @@
     <% include ./header %>
   </header>
   <div id="upper">
-    <form class="form">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <input class="form-control" name="email" type="text" placeholder="Email" />
-          </div>
-          <div class="col-md-4">
-            <input class="form-control" name="password" type="text" placeholder="Password" />
-          </div>
-          <div class="col-md-2">
-            <button id='log-in'>Log-in</button>
-          </div>
-          <div class="col-md-2">
-            <button id="sign-up">Sign-up</button>
+    <% if (typeof signinSuccess === 'undefined') { %>
+      <form class="form" method="POST" action="/">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <input class="form-control" name="email" type="text" placeholder="Email" required />
+            </div>
+            <div class="col-md-4">
+              <input class="form-control" name="password" type="password" placeholder="Password" required />
+            </div>
+            <div class="col-md-2">
+              <button type="submit" id='log-in'>Log-in</button>
+            </div>
+            <div class="col-md-2">
+              <button id="sign-up">Sign-up</button>
+            </div>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
+    <% } %>
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -134,7 +137,7 @@
         <div class="col-lg-4">
           <h2>Community</h2>
           <p>Coming Soon!</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <button>Click Here</button>
         </div>
         <!-- /.col-lg-4 -->
       </div>

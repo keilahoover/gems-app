@@ -14,11 +14,11 @@
   margin-right: 50px;
 }
 
-#delete, a {
+#delete-user, a {
   border-radius: 15px;
 }
 
-#delete {
+#delete-user {
   background-color: #BC4639;
 }
 
