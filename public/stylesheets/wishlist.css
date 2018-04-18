@@ -1,0 +1,57 @@
+#main-container {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+}
+
+#settings-container {
+  border: 1px solid #BC4639;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+#delete, a {
+  border-radius: 15px;
+}
+
+#delete {
+  background-color: #BC4639;
+}
+
+#item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #BC4639;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  height: 30%;
+  /* width: 30px; */
+  padding: 30px;
+}
+
+img {
+  width: 100px;
+  margin-top: 10px;
+}
+
+button {
+  width: 100px;
+}
+
+
+#4285F4
+#5C2018
+#BC4639
+#D4A59A
+#F3E0DC
