@@ -24,30 +24,13 @@ router.get('/', (req, res, next) => {
   .join('products', 'wishlist.products_id', 'products.id')
   .select('*')
   .then((allItems) => {
-    const camelized = allItems.map((entry) => humps.camelizeKeys(entry))
-    res.json(camelized)
+    res.render('wishlist', {title: 'Wishlist'})
+    allItems
+    // const camelized = allItems.map((entry) => humps.camelizeKeys(entry))
+    // res.json(camelized)
   })
   .catch((err) => console.log('err: ', err))
 });
-
-
-// wait until cards are generated?
-
-// router.get('/check/:id', (req, res, next) => {
-//   knex('wishlist')
-//   .where('id', req.params.pid)
-//   .join('products', 'wishlist.products_id', 'products.id')
-//   .select('*')
-//   .returning('*')
-//   .then((result) => {
-//     // console.log('result :', result);
-//     if (result.length === 0) {
-//       res.json(false)
-//     } else if (req.query.products === result[0].products_id) {
-//       s.json(true)
-//     }
-//   })
-// })
 
 router.post('/', (req, res, next) => {
   // const token = jwt.decode(req.cookies.token)
