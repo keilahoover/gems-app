@@ -1,4 +1,4 @@
-//most recent version 
+//most recent version
 
 'use strict';
 
@@ -13,8 +13,8 @@ const bcrypt = require('bcrypt');
 
 /* GET to the home page. */
 router.get('/', function(req, res, next) {
-  res.send('welcome to the home page!')
-});
+  res.render('index', { title: 'GEMS' });
+ })
 
 /* login to an account */
 router.post('/', (req, res, next) => {
