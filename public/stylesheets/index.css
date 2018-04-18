@@ -6,7 +6,7 @@ button.nav{
   margin-bottom: 2rem;
   margin-right: 0;
   justify-content: center;
-
+  font-family: "Shrikhand", cursive;
 }
 
 button{
@@ -36,17 +36,16 @@ button.catagory{
 
 #sign-up{
   padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 40px;
   font-size: 15px;
-  /* margin-bottom: 2rem; */
-
+  font-family: "Shrikhand", cursive;
 }
 
 #log-in{
   padding-left: 50px;
   padding-right: 50px;
   font-size: 15px;
-  /* margin-bottom: 2rem; */
+  font-family: "Shrikhand", cursive;
 }
 
 .form{
@@ -61,7 +60,14 @@ button.catagory{
   background-color: #BC4639;
 }
 
-{
-  background-color: #BC4639;
+#myCarousel{
+  margin-bottom: 0;
+}
 
+#lower{
+  background-color: #BC4639;
+  padding-top: 10rem;
+  padding-bottom: 20rem;
+  margin: 0;
+  color: #F3E0DC;
 }
