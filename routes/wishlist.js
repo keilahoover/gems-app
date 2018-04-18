@@ -12,8 +12,10 @@ router.get('/', (req, res, next) => {
   .join('products', 'wishlist.products_id', 'products.id')
   .select('*')
   .then((allItems) => {
-    const camelized = allItems.map((entry) => humps.camelizeKeys(entry))
-    res.json(camelized)
+    res.render('wishlist', {title: 'Wishlist'})
+    allItems
+    // const camelized = allItems.map((entry) => humps.camelizeKeys(entry))
+    // res.json(camelized)
   })
   .catch((err) => console.log('err: ', err))
 });
