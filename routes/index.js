@@ -1,4 +1,4 @@
-//most recent version 
+//most recent version
 
 'use strict';
 
@@ -11,10 +11,10 @@ const KEY = process.env.JWT_KEY
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-/* GET to the home page. */
+
 router.get('/', function(req, res, next) {
-  res.send('welcome to the home page!')
-});
+  res.render('index', { title: 'GEMS' });
+ })
 
 /* login to an account */
 router.post('/', (req, res, next) => {
@@ -43,12 +43,12 @@ router.post('/', (req, res, next) => {
               let signedUser = jwt.sign(user, KEY)
 
               res.cookie('token', signedUser, {
-                  path: '/',
-                  httpOnly: true
-                })
+                path: '/',
+                httpOnly: true
+              })
 
 
-             res.send('youre logged in')
+              res.send('youre logged in')
             } else {
               // log
               res.status(400).type('text/plain')

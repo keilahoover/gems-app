@@ -13,7 +13,14 @@ const bcrypt = require('bcrypt');
 
 /* GET users listing. */
 router.get('/', (req, res, next) => {
-  res.send('this is where users sign up for an account');
+  knex('users')
+    .select('*')
+    .then((users) => {
+      res.render('users', {
+        title: 'Sign Up',
+        users
+      });
+    })
 });
 
 /*POST sign up */
