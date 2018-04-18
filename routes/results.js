@@ -1,9 +1,15 @@
-var express = require('express');
-var router = express.Router();
+router.get('/', (req, res, next) => {
+  // res.send('All Products')
+  knex('products')
+    .select('*')
+    .then((allProducts) => {
+      res.render('results', {
+        title: 'All Products',
+        allProducts
+      })
+    })
+})
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'GEMS' });
-});
+router.get('/:cat', (req, res, next) => {
 
-module.exports = router;
+})
