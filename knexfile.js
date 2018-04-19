@@ -5,14 +5,14 @@ module.exports = {
   development: {
     client: 'pg',
 
-    connection: 'postgres://localhost/gems_app_dev'
+    connection: 'postgres://awray:doot@localhost:5433/gems_app_dev'
 
   },
 
     test: {
       client: 'pg',
 
-      connection: 'postgres://localhost/gems_app_test'
+      connection: 'postgres://awray:doot@localhost:5433/gems_app_test'
   },
 
   production: {

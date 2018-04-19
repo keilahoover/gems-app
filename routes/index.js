@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'GEMS' });
  })
 
- 
+
 
 /* login to an account */
 router.post('/', (req, res, next) => {
@@ -58,4 +58,10 @@ router.post('/', (req, res, next) => {
     })
     .catch((err) => `>>> CRAAAAAAAPPPPPPPPPPP ${err}`)
   })
+
+  router.delete('/', (req, res, next) => {
+  res.cookie('users', '').json(true)
+})
+
+
   module.exports = router;
