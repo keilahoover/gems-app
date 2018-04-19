@@ -11,6 +11,10 @@ exports.seed = function(knex, Promise) {
       }])
     })
     .then(function() {
+<<<<<<< HEAD
+
+=======
+>>>>>>> db61035c50ccbe68dc2f325ac079a690976d340c
       return knex.raw(`SELECT setval('wishlist_id_seq', (SELECT MAX(id) FROM wishlist));`)
     });
 };

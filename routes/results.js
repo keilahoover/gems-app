@@ -10,7 +10,6 @@ const bcrypt = require('bcrypt');
 
 
 router.get('/', (req, res, next) => {
-  // res.send('All Products')
   knex('products')
     .select('*')
     .then((allProducts) => {
@@ -19,11 +18,25 @@ router.get('/', (req, res, next) => {
         allProducts
       })
     })
+    .catch((err) => {
+      next(err)
+    })
 })
 
-router.get('/:cat', (req, res, next) => {
-
-})
+// router.get('/:atq', (req, res, next) => {
+//  knex('products')
+//  .where('atq', req.params.atq )
+//  .then((antProducts) => {
+//    res.render('results', {
+//      title: 'Antiques',
+//      antProducts
+//
+//    })
+//  })
+//  .catch((err) => {
+//    next(err)
+//  })
+// })
 
 
 module.exports = router;

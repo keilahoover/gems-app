@@ -1,3 +1,7 @@
+body {
+  font-family: 'Open-Sans', sans-serif;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
@@ -41,6 +45,7 @@
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
+  left: 60%;
   bottom: 3rem;
   z-index: 10;
 }
@@ -50,6 +55,19 @@
   height: 500px;
   background-color: #777;
 }
+
+.carousel-item__h1 {
+  background-color: #A98B88;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  font-family: 'Shrikhand', cursive;
+  font-size: 3.3rem;
+  color: #FFFFFF;
+  text-align: center;
+  letter-spacing: .2rem;
+  box-shadow: 3px 3px #fb734f;
+}
+
 .carousel-item > img {
   position: absolute;
   top: 0;
@@ -73,7 +91,10 @@ img{
   text-align: center;
 }
 .marketing h2 {
-  font-weight: 400;
+  font-size: 3.3rem;
+  font-weight: 600;
+  font-family: 'Shrikhand', cursive;
+  letter-spacing: 0.3rem;
 }
 .marketing .col-lg-4 p {
   margin-right: .75rem;
