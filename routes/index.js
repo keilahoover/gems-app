@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'GEMS' });
  })
 
- 
+
 
 /* login to an account */
 router.post('/', (req, res, next) => {
