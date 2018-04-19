@@ -45,6 +45,7 @@ body {
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
+  left: 60%;
   bottom: 3rem;
   z-index: 10;
 }
@@ -56,7 +57,15 @@ body {
 }
 
 .carousel-item__h1 {
+  background-color: #A98B88;
+  border-radius: 2rem;
+  padding: 2.5rem;
   font-family: 'Shrikhand', cursive;
+  font-size: 3.3rem;
+  color: #FFFFFF;
+  text-align: center;
+  letter-spacing: .2rem;
+  box-shadow: 3px 3px #fb734f;
 }
 
 .carousel-item > img {
