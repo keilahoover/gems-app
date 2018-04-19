@@ -16,6 +16,23 @@ $(document).ready(function() {
   // })
 
 
+    $('#logout-button').click(function() {
+      event.preventDefault()
+      const options = {
+        dataType: 'json',
+        type: 'DELETE',
+        url: '/'
+      };
+
+      $.ajax(options)
+      .done(() => {
+        window.location.href = '/';
+      })
+      .fail(() => {
+        console.log("denied")
+        });
+      });
+
 
 
   $('#sign-up').click(function() {
