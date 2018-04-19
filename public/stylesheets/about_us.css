@@ -1,0 +1,28 @@
+
+img{
+  margin-left: 4rem;
+}
+
+p{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+}
+
+#bio{
+  margin-left: 20rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+#about-us{
+  margin-left: 26.5rem;
+  margin-bottom: 3rem;
+  margin-top: 10rem;
+}
+
+.container{
+  margin-bottom: 10rem;
+}
