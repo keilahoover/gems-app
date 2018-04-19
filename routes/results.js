@@ -23,19 +23,37 @@ router.get('/', (req, res, next) => {
     })
 })
 
-// router.get('/:atq', (req, res, next) => {
-//  knex('products')
-//  .where('atq', req.params.atq )
-//  .then((antProducts) => {
-//    res.render('results', {
-//      title: 'Antiques',
-//      antProducts
+// router.get('/:cat', (req, res, next) => {
+//   knex('products')
+//     .where('category', req.params.cat)
+//     .then((results) => {
 //
-//    })
-//  })
-//  .catch((err) => {
-//    next(err)
-//  })
+//       switch (req.params.cat) {
+//         case 'atq':
+//           title: 'Antiques'
+//           break;
+//         case 'bka':
+//           title: 'Books'
+//           break;
+//         case 'vga':
+//           title: 'Video Games'
+//           break;
+//         case 'clt':
+//           title: 'Collectables'
+//           break;
+//           default:
+//           'All Products'
+//       }
+//
+//       res.render('results', {
+//         title: resTitle,
+//         products: results
+//
+//       })
+//     })
+//     .catch((err) => {
+//       next(err)
+//     })
 // })
 
 
