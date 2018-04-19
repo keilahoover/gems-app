@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 })
 
 
- 
+
 
 /* login to an account */
 router.post('/', (req, res, next) => {
