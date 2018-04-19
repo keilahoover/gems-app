@@ -1,8 +1,19 @@
 
-<div>
-  <img id="header-line-left" src="../images/header-line.png">
-  <img id="header-line-right" src="../images/header-line-right.png">
-  <!-- Add DOM manipulation to populate user name when signed in -->
-  <p class="header__p">Welcome, User!</p>
-  <img class="header__logo" src="../images/Gems_Logo.png">
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./head %>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <div>
+    <img id="header-line-left" src="../images/header-line.png">
+    <img id="header-line-right" src="../images/header-line-right.png">
+    <!-- Add DOM manipulation to populate user name when signed in -->
+    <!-- <p class="header__p">Welcome, User!</p> -->
+    <div class="home-account-wrap">
+      <a id="header__a" href="wishlist"><i class="fas fa-user-circle"></i>Account</a>
+      <a id="header__a" href="/"><i class="fas fa-home"></i>Home</a>
+    </div>
+    <img class="header__logo" src="../images/Gems_Logo.png">
+  </div>
+</html>

@@ -1,13 +1,20 @@
+html {
+  font-size: 10px;
+}
 
-img{
+body {
+  font-family: "Open-Sans", sans-serif;
+}
+
+#profile-img {
   margin-left: 4rem;
 }
 
-p{
+.description {
   text-align: center;
 }
 
-h2{
+.name {
   text-align: center;
 }
 
