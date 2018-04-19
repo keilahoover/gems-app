@@ -18,16 +18,24 @@ router.get('/', (req, res, next) => {
         allProducts
       })
     })
+    .catch((err) => {
+      next(err)
+    })
 })
 
 // router.get('/:atq', (req, res, next) => {
-//   knex('products')
-//   .where('id', req.params.id)
-//   .then((specProducts) => {
-//     res.render('results', {
-//       title: 'Anitques'
-//     })
-//   })
+//  knex('products')
+//  .where('atq', req.params.atq )
+//  .then((antProducts) => {
+//    res.render('results', {
+//      title: 'Antiques',
+//      antProducts
+//
+//    })
+//  })
+//  .catch((err) => {
+//    next(err)
+//  })
 // })
 
 
