@@ -5,21 +5,20 @@ body {
 header {
   background-color: #241F24;
   color: #F2F1F0;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
   width: 100%;
   text-align: center;
-  height: 35vh;
 }
 
-.header__a {
+.header__p {
+  padding-top: 18px;
   background-color: #241F24;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
 }
 
-.header__h1 {
-  font-size: 8.5rem;
-  font-weight: 800;
-  padding-top: 25px;
+.header__logo {
+  width: 500px;
+  height: 200px;
 }
 
 .fa-gem {

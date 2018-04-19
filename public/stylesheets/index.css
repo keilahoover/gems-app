@@ -76,14 +76,20 @@ button:hover {
   list-style: none;
 }
 
-.category__li {
+.category__li,
+.community__a {
   background-color: #FFFFFF;
   color: #FA582E;
   font-family: 'Montserrat', sans-serif;
 }
 
-.category__li:hover {
+.category__li:hover,
+.community__a:hover {
   color: #fb734f;
+}
+
+.community__p {
+  font-size: 2rem;
 }
 
 /* #myCarousel{
