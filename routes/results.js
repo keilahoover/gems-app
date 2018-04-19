@@ -10,7 +10,6 @@ const bcrypt = require('bcrypt');
 
 
 router.get('/', (req, res, next) => {
-  // res.send('All Products')
   knex('products')
     .select('*')
     .then((allProducts) => {
