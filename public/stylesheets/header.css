@@ -9,14 +9,29 @@ header {
   text-align: center;
 }
 
-.header__p {
+.home-account-wrap {
+  float: right;
+}
+
+.header__a {
   padding-top: 18px;
   background-color: #241F24;
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
 }
 
+.header__a:hover {
+  color: #EA6446;
+  text-decoration: none;
+}
+
+.fa-home,
+.fa-user-circle {
+  padding-right: .5rem;
+}
+
 .header__logo {
+  margin-left: 185px;
   width: 500px;
   height: 200px;
 }

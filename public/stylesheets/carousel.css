@@ -45,9 +45,12 @@ body {
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  left: 60%;
   bottom: 3rem;
   z-index: 10;
+}
+
+#carousel-caption {
+  left: 60%;
 }
 
 /* Declare heights because of positioning of img element */

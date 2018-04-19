@@ -9,7 +9,7 @@ module.exports = {
 
     test: {
       client: 'pg',
-      connection: 'postgres:localhost:gems_app_test'
+      connection: 'postgres:localhost/gems_app_test'
   },
 
   production: {

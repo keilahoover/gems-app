@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-    <% include ./head %>
-    <link rel="stylesheet" href="/stylesheets/homepage.css">
+  <% include ./head %>
+    <!-- <link rel="stylesheet" href="/stylesheets/homepage.css"> -->
     <link rel="stylesheet" href="/stylesheets/results.css">
 </head>
-  <body>
-    <header>
-      <% include ./header %>
-    </header>
-    <main>
-      <main role="main">
-        <% for (let i = 0; i < allProducts.length; i++) { %>
-        <article class="card">
-              <div class="top-line"></div>
-              <div class="bottom-line">
-                <h3 class="product-title">Title</h3>
-                <h4 class="product-price">$$$</h4>
-                <button class="product-url"><a class="card-url" title="attachment-link" href="https://seattle.craigslist.org/oly/atq/d/vintage-copper-canisters-make/6552292985.html">More details...</a></button>
-                <button class="wishlist-btn">Add to Wishlist</button>
-              </div>
-            </article>
-      </main>
-        <% } %>
-        </div>
-      </div>
-    </main>
-    <footer>
-        <% include ./footer %>
-    </footer>
 
-  </body>
+<body>
+  <header>
+    <% include ./header %>
+  </header>
+
+  <main role="main">
+    <% for (let i = 0; i < allProducts.length; i++) { %>
+      <article class="card">
+        <img src=<%=allProducts[i].image%> />
+        <div class="bottom-line">
+          <h3 class="product-title"><%=allProducts[i].title%></h3>
+          <h4 class="product-price"><%=allProducts[i].price%></h4>
+          <button class="product-url"><a class="card-url" title="attachment-link" target="_blank" href="<%= allProducts[i].url %>">More details...</a></button>
+          <button class="wishlist-btn">Add to Wishlist</button>
+        </div>
+      </article>
+      <% } %>
+
+  </main>
+
+  </main>
+  <footer>
+    <% include ./footer %>
+  </footer>
+
+</body>
+
 </html>
