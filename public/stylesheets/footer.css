@@ -1,11 +1,10 @@
 footer {
   background-color: #241F24;
-  /* color: #F2F1F0; */
   width: 100%;
 }
 
 #footer-container {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -17,6 +16,11 @@ footer {
   background-color: #241F24;
   padding: 0;
   margin: 60px;
+}
+
+#footer__a:hover {
+  color: #EA6446;
+  text-decoration: none;
 }
 
 .footer__logo {

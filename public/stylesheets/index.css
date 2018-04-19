@@ -86,6 +86,7 @@ button:hover {
 .category__li:hover,
 .community__a:hover {
   color: #fb734f;
+  text-decoration: none;
 }
 
 .community__p,
