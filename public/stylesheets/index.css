@@ -3,9 +3,8 @@ body {
 }
 
 button.nav{
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 2em;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-right: 0;
@@ -23,7 +22,6 @@ button {
   font-size: 16px;
   font-family: "Shrikhand", cursive;
   letter-spacing: 0.25rem;
-  margin: 4px 2px;
   box-shadow: 3px 3px #A58C8A;
 }
 
@@ -35,9 +33,13 @@ button.category{
   text-decoration: none;
   display: inline-block;
   font-size: 4rem;
-  margin: 4px 2px;
   box-shadow: 3px 3px #D4A59A;
+}
 
+#category-redirect {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 button:hover {
@@ -71,7 +73,7 @@ button:hover {
 }
 
 .category__ul {
-  font-size: 3rem;
+  font-size: 2rem;
   padding: 0;
   list-style: none;
 }
@@ -93,15 +95,3 @@ button:hover {
 .about-us__p {
   font-size: 2rem;
 }
-
-/* #myCarousel{
-  margin-bottom: 0;
-}
-
-#lower{
-  background-color: #BC4639;
-  padding-top: 10rem;
-  padding-bottom: 20rem;
-  margin: 0;
-  color: #F3E0DC;
-} */
