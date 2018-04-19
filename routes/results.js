@@ -33,7 +33,7 @@ router.get('/:cat', (req, res, next) => {
         case 'atq':
           title = 'Antiques';
           break;
-        case 'bka':
+        case 'bks':
           title = 'Books';
           break;
         case 'vgm':
