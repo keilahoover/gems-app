@@ -20,9 +20,15 @@ router.get('/', (req, res, next) => {
     })
 })
 
-router.get('/:cat', (req, res, next) => {
-
-})
+// router.get('/:atq', (req, res, next) => {
+//   knex('products')
+//   .where('id', req.params.id)
+//   .then((specProducts) => {
+//     res.render('results', {
+//       title: 'Anitques'
+//     })
+//   })
+// })
 
 
 module.exports = router;
