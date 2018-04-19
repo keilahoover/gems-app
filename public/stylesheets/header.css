@@ -13,14 +13,15 @@ header {
   float: right;
 }
 
-.header__a {
+#header__a {
   padding-top: 18px;
   background-color: #241F24;
+  color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
-.header__a:hover {
+#header__a:hover {
   color: #EA6446;
   text-decoration: none;
 }

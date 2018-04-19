@@ -1,0 +1,35 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open-Sans", sans-serif;
+}
+
+#profile-img {
+  margin-left: 4rem;
+}
+
+.description {
+  text-align: center;
+}
+
+.name {
+  text-align: center;
+}
+
+#bio{
+  margin-left: 20rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+#about-us{
+  margin-left: 26.5rem;
+  margin-bottom: 3rem;
+  margin-top: 10rem;
+}
+
+.container{
+  margin-bottom: 10rem;
+}
