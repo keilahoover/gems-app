@@ -6,13 +6,19 @@ header {
   background-color: #241F24;
   color: #F2F1F0;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
   width: 100%;
   text-align: center;
   height: 35vh;
 }
 
+.header__a {
+  background-color: #241F24;
+}
+
 .header__h1 {
-  font-size: 6rem;
+  font-size: 8.5rem;
+  font-weight: 800;
   padding-top: 25px;
 }
 

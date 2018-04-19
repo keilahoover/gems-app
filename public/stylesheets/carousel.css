@@ -1,3 +1,7 @@
+body {
+  font-family: 'Open-Sans', sans-serif;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
@@ -50,6 +54,11 @@
   height: 500px;
   background-color: #777;
 }
+
+.carousel-item__h1 {
+  font-family: 'Shrikhand', cursive;
+}
+
 .carousel-item > img {
   position: absolute;
   top: 0;
@@ -73,7 +82,10 @@ img{
   text-align: center;
 }
 .marketing h2 {
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Shrikhand', cursive;
+  letter-spacing: 0.3rem;
 }
 .marketing .col-lg-4 p {
   margin-right: .75rem;
