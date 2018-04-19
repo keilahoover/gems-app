@@ -27,10 +27,10 @@
               <input class="form-control" name="password" type="password" placeholder="Password" required />
             </div>
             <div class="col-md-2">
-              <button type="submit" id="log-in">Log-in</button>
+              <button type="submit" id="log-in">Log In</button>
             </div>
             <div class="col-md-2">
-              <button id="sign-up">Sign-up</button>
+              <button id="sign-up">Sign Up</button>
             </div>
           </div>
         </div>
@@ -40,23 +40,23 @@
 
     <!-- BEGIN: THIS PART SHOULD ONLY SHOW UP **WHEN** LOGGED IN -->
     <% if (typeof signinSuccess !== "undefined") { %>
-      <a href="/wishlist">WISH LIST!</a>
+      <a href="/wishlist">WISHLIST</a>
     <% } %>
     <!-- END: THIS PART SHOULD ONLY SHOW UP **WHEN** LOGGED IN -->
 
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <button class="nav">Antiqes</button>
+          <button class="nav">ANTIQUES</button>
         </div>
         <div class="col-md-3">
-          <button class="nav">Books</button>
+          <button class="nav">BOOKS</button>
         </div>
         <div class="col-md-3">
-          <button class="nav">Collectibles</button>
+          <button class="nav">COLLECTIBLES</button>
         </div>
         <div class="col-md-3">
-          <button class="nav">Video Games</button>
+          <button class="nav">VIDEO GAMES</button>
         </div>
       </div>
     </div>
@@ -70,11 +70,10 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="first-slide" src="../images/antiques_carousel.jpeg" alt="First slide">
-        <div class="container">
+        <img class="first-slide" src="../images/antiques_carousel.jpg" alt="First slide">
+        <div class="container carousel-item__bg">
           <div class="carousel-caption text-left">
-            <h1>Antiques</h1>
-            <p></p>
+            <h1 class="carousel-item__h1">ANTIQUES</h1>
           </div>
         </div>
       </div>
@@ -82,7 +81,7 @@
         <img class="second-slide" src="../images/books_carousel.jpg" alt="Second slide">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Books</h1>
+            <h1 class="carousel-item__h1">BOOKS</h1>
             <p></p>
           </div>
         </div>
@@ -91,69 +90,55 @@
         <img class="third-slide" src="../images/video_game_carousel.png" alt="Third slide">
         <div class="container">
           <div class="carousel-caption text-right">
-            <h1>Video Games</h1>
+            <h1 class="carousel-item__h1">VIDEO GAMES</h1>
             <p></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <img class="fourth-slide" src="../images/collectibles_carousel.png" alt="Fourth slide">
+        <img class="fourth-slide" src="../images/collectibles_carousel.jpg" alt="Fourth slide">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Collectibles</h1>
+            <h1 class="carousel-item__h1">COLLECTIBLES</h1>
             <p></p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Testing result card layout -->
+    <div class="container marketing">
   <main id="lower" role="main">
     <div class="container">
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <h2>Catagories</h2>
+          <h2>CATEGORIES</h2>
             <div class="container">
-              <div class="row">
-                <div class="col-md-12">
-                  <button class="catagory">Antiques</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <button class="catagory">Books</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <button class="catagory">Collectibles</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <button class="catagory">Video Games</button>
-                </div>
-              </div>
+              <ul class="category__ul">
+                <li><a href="#" target="_blank" class="category__li">Antiques</a></li>
+                <li><a href="#" target="_blank" class="category__li">Books</a></li>
+                <li><a href="#" target="_blank" class="category__li">Collectibles</a></li>
+                <li><a href="#" target="_blank" class="category__li">Video Games</a></li>
+              </ul>
               </div>
           </div>
 
         <!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <h2>About Us</h2>
-          <button>Click Here</button>
+          <h2>ABOUT US</h2>
+          <p class="about-us__p"><a href="../about_us.html" target="_blank" class="community__a">Our Team</a></p>
         </div>
         <!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <h2>Community</h2>
-          <p>Coming Soon!</p>
-          <button>Click Here</button>
+          <h2>COMMUNITY</h2>
+          <p class="community__p"><a href="../community.html" target="_blank" class="community__a">Coming Soon!</a></p>
         </div>
         <!-- /.col-lg-4 -->
       </div>
     </div>
       <!-- /.row -->
   </main>
+</div>
 
   <footer>
     <% include ./footer %>

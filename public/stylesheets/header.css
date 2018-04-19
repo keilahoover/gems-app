@@ -5,13 +5,33 @@ body {
 header {
   background-color: #241F24;
   color: #F2F1F0;
-  font-family: 'Montserrat', sans-serif;
   width: 100%;
   text-align: center;
-  height: 35vh;
 }
 
-.header__h1 {
-  font-size: 6rem;
-  padding-top: 25px;
+.header__p {
+  padding-top: 18px;
+  background-color: #241F24;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+}
+
+.header__logo {
+  width: 500px;
+  height: 200px;
+}
+
+.fa-gem {
+  font-size: 4.5rem;
+  margin-right: 1.5rem;
+}
+
+#header-line-left {
+  height: 18vh;
+  float: left;
+}
+
+#header-line-right {
+  height: 18vh;
+  float: right;
 }
