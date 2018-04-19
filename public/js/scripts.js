@@ -10,9 +10,35 @@
 $(document).ready(function() {
   console.log('ready to go ');
 
+  // $('#user-wishlist').click(function() {
+  //   event.preventDefault()
+  //   console.log("you clicked me bro");
+  // })
+
+
+    $('#logout-button').click(function() {
+      event.preventDefault()
+      const options = {
+        dataType: 'json',
+        type: 'DELETE',
+        url: '/'
+      };
+
+      $.ajax(options)
+      .done(() => {
+        window.location.href = '/';
+      })
+      .fail(() => {
+        console.log("denied")
+        });
+      });
+
+
+
   $('#sign-up').click(function() {
     event.preventDefault()
     console.log('clicked me');
 
   })
+
 })

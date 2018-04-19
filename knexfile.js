@@ -6,10 +6,12 @@ module.exports = {
     client: 'pg',
 
     connection: 'postgres://localhost/gems_app_dev'
+
   },
 
     test: {
       client: 'pg',
+
       connection: 'postgres://localhost/gems_app_test'
   },
 
