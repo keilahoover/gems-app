@@ -1,6 +1,6 @@
 button.nav{
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
   font-size: 2em;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -9,20 +9,22 @@ button.nav{
   font-family: "Shrikhand", cursive;
 }
 
-button{
-  background-color: #04a0cc;
+button {
+  background-color: #EA6446;
   border: none;
-  color: #F3E0DC;
+  color: #FFFFFF;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  font-family: 'Shrikhand', cursive;
+  letter-spacing: 0.25rem;
   margin: 4px 2px;
-  box-shadow: 3px 3px #D4A59A;
+  box-shadow: 3px 3px #A58C8A;
 }
 
-button.catagory{
-  background-color: #04a0cc;
+button.category{
+  background-color: #EA6446;
   border: none;
   color: #F3E0DC;
   text-align: center;
@@ -35,15 +37,15 @@ button.catagory{
 }
 
 #sign-up{
-  padding-left: 50px;
-  padding-right: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-size: 15px;
   font-family: "Shrikhand", cursive;
 }
 
 #log-in{
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-size: 15px;
   font-family: "Shrikhand", cursive;
 }
@@ -57,10 +59,10 @@ button.catagory{
 }
 
 #upper{
-  background-color: #BC4639;
+  background-color: #241F24;
 }
 
-#myCarousel{
+/* #myCarousel{
   margin-bottom: 0;
 }
 
@@ -70,4 +72,4 @@ button.catagory{
   padding-bottom: 20rem;
   margin: 0;
   color: #F3E0DC;
-}
+} */

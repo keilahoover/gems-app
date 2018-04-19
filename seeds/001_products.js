@@ -1,114 +1,372 @@
+'use strict'
 
-exports.seed = function(knex, Promise) {
-  const craigslist = require('node-craigslist')
-  const antiqueClient = new craigslist.Client({
-      city : 'boulder'
-  }),
-  options = {
-    baseHost : '', // defaults to craigslist.org
-    category : 'ata', // defaults to sss (all)
-    city : '',
-    maxAsk : '200',
-    minAsk : '100'
-  };
+const ata =
+[
+  { pid: '6545404038',
+    image: 'https://images.craigslist.org/01313_3Ofan7WJQTd_600x450.jpg',
+    price: '$175',
+    title: 'Great Empire Dresser',
+    url: 'https://boulder.craigslist.org/atq/d/great-empire-dresser/6545404038.html' },
+  { pid: '6564663206',
+    image: 'https://images.craigslist.org/00T0T_2Yg2rNpDMs6_600x450.jpg',
+    price: '$300',
+    title: 'Antique Vanity',
+    url: 'https://boulder.craigslist.org/atq/d/antique-vanity/6564663206.html' },
+  { pid: '6564987944',
+    image: 'https://images.craigslist.org/00Y0Y_eVaweWKhtZm_600x450.jpg',
+    price: '$100',
+    title: 'Vintage toolbox',
+    url: 'https://boulder.craigslist.org/atq/d/vintage-toolbox/6564987944.html' },
+  { pid: '6564138864',
+    image: 'https://images.craigslist.org/00M0M_jEB9cDPAPOT_600x450.jpg',
+    price: '$65',
+    title: 'Coleman lantern',
+    url: 'https://boulder.craigslist.org/atq/d/coleman-lantern/6564138864.html' },
+  { pid: '6542514142',
+    image: 'https://images.craigslist.org/00s0s_dKW25rWRgzd_600x450.jpg',
+    price: '$950',
+    title: 'Antique mining cart.',
+    url: 'https://boulder.craigslist.org/atq/d/antique-mining-cart/6542514142.html' },
+  { pid: '6563071269',
+    image: 'https://images.craigslist.org/00n0n_d8VStXZg3J0_600x450.jpg',
+    price: '$50',
+    title: 'Antique school desk.',
+    url: 'https://boulder.craigslist.org/atq/d/antique-school-desk/6563071269.html' },
+  { pid: '6555415781',
+    image: 'https://images.craigslist.org/00000_2aAMFPaW32_600x450.jpg',
+    price: '$250',
+    title: 'Solid Oak 6 chair set',
+    url: 'https://boulder.craigslist.org/atq/d/solid-oak-6-chair-set/6555415781.html' },
+  { pid: '6564530115',
+    image: 'https://images.craigslist.org/00D0D_8WQsCUTg4rV_600x450.jpg',
+    price: '$250',
+    title: 'Quarter Sawn Oak Cabinet with Drawer Storage',
+    url: 'https://boulder.craigslist.org/atq/d/quarter-sawn-oak-cabinet-with/6564530115.html' },
+  { pid: '6547544248',
+    image: 'https://images.craigslist.org/00P0P_1T2e9WFkVn2_600x450.jpg',
+    price: '$85',
+    title: '2 Art Deco Style table Lamps With Fiber Shades Handmade',
+    url: 'https://boulder.craigslist.org/atq/d/2-art-deco-style-table-lamps/6547544248.html' },
+  { pid: '6554113201',
+    image: 'https://images.craigslist.org/00f0f_6qLqMeAkRwa_600x450.jpg',
+    price: '$100',
+    title: 'Wooden folding chairs',
+    url: 'https://boulder.craigslist.org/atq/d/wooden-folding-chairs/6554113201.html' },
+  { pid: '6564075241',
+    image: 'https://images.craigslist.org/00v0v_4psyV4v94FT_600x450.jpg',
+    price: '$600',
+    title: 'Roll Top Desk',
+    url: 'https://boulder.craigslist.org/atq/d/roll-top-desk/6564075241.html' },
+  { pid: '6564816606',
+    image: 'https://images.craigslist.org/00j0j_hr1j7iCo0ym_600x450.jpg',
+    price: '$20',
+    title: 'The drawing Master set from 1915-1920s',
+    url: 'https://boulder.craigslist.org/atq/d/the-drawing-master-set-froms/6564816606.html' },
+  { pid: '6559171221',
+    image: 'https://images.craigslist.org/00Y0Y_ay0gEBJBRIJ_600x450.jpg',
+    price: '$30',
+    title: 'Antique artist\'s painting/drafting stool',
+    url: 'https://boulder.craigslist.org/atq/d/antique-artists-painting/6559171221.html' },
+  { pid: '6559301886',
+    image: 'https://images.craigslist.org/00q0q_5pFNlHD0H0H_600x450.jpg',
+    price: '$32',
+    title: '2 Antique Cupboard Doors With Glass Wood Frame Nice',
+    url: 'https://boulder.craigslist.org/atq/d/2-antique-cupboard-doors-with/6559301886.html' },
+  { pid: '6563726696',
+    image: 'https://images.craigslist.org/01414_3KOjfz9rdpX_600x450.jpg',
+    price: '$45',
+    title: 'Drop leaf table',
+    url: 'https://boulder.craigslist.org/atq/d/drop-leaf-table/6563726696.html' },
+  { pid: '6551454859',
+    image: 'https://images.craigslist.org/00m0m_iAEDt9l6AOZ_600x450.jpg',
+    price: '$150',
+    title: 'Antique Art Deco 1940\'s Waterfall Dresser Tall Deep Drawers',
+    url: 'https://boulder.craigslist.org/atq/d/antique-art-deco-1940s/6551454859.html' }
+]
 
-  const bookClient = new craigslist.Client({
-      city : 'boulder'
-    }),
-    bOptions = {
-      baseHost : '', // defaults to craigslist.org
-      category : 'bka', // defaults to sss (all)
-      city : '',
-      maxAsk : '200',
-      minAsk : '100'
-    };
+const bka =
+[
+  { pid: '6563474074',
+    image: 'https://images.craigslist.org/01111_dCNO5dZmlSA_600x450.jpg',
+    price: '$50',
+    title: 'Text Books / The Norton Shakespeare /others',
+    url: 'https://boulder.craigslist.org/bks/d/text-books-the-norton/6563474074.html' },
+  { pid: '6559495618',
+    image: 'https://images.craigslist.org/00A0A_7kaa2cnJNkz_600x450.jpg',
+    price: '$325',
+    title: 'La Sportiva Syborg Boots 28.5',
+    url: 'https://boulder.craigslist.org/bks/d/la-sportiva-syborg-boots-285/6559495618.html' },
+  { pid: '6554732292',
+    image: 'https://images.craigslist.org/00A0A_6qa4C2qy3Ux_600x450.jpg',
+    price: '$10',
+    title: 'BMW 3-Series (92-98) Haynes Repair Manual',
+    url: 'https://boulder.craigslist.org/bks/d/bmw-3-serieshaynes-repair/6554732292.html' },
+  { pid: '6547023025',
+    image: 'https://images.craigslist.org/00T0T_hf4u9qM0dFd_600x450.jpg',
+    price: '$10',
+    title: 'The 39 Clues books: 2-6 & 8 $10.00 OBO',
+    url: 'https://boulder.craigslist.org/bks/d/the-39-clues-booksobo/6547023025.html' },
+  { pid: '6551995449',
+    image: 'https://images.craigslist.org/00Z0Z_gyPXqdM5346_600x450.jpg',
+    price: '$80',
+    title: 'TRIGONOMETRY  - 2nd Edition - Coburn',
+    url: 'https://boulder.craigslist.org/bks/d/trigonometry-2nd-edition/6551995449.html' },
+  { pid: '6518518988',
+    image: 'https://images.craigslist.org/00E0E_93etZGZOeBX_600x450.jpg',
+    price: '$20',
+    title: 'Molymod Organic Chemistry Student Set',
+    url: 'https://boulder.craigslist.org/bks/d/molymod-organic-chemistry/6518518988.html' },
+  { pid: '6563625766',
+    image: 'https://images.craigslist.org/01111_iMxlMunxtgS_600x450.jpg',
+    price: '$75',
+    title: 'Kabbalah art books for sale',
+    url: 'https://boulder.craigslist.org/bks/d/kabbalah-art-books-for-sale/6563625766.html' },
+  { pid: '6561007714',
+    image: 'https://images.craigslist.org/00c0c_gtSReloXAW_600x450.jpg',
+    price: '$100',
+    title: 'PHYSICS - PRINCIPLES WITH APPLICATIONS 7th EDITION - GIANCOLI',
+    url: 'https://boulder.craigslist.org/bks/d/physics-principles-with/6561007714.html' },
+  { pid: '6549237162',
+    image: 'https://images.craigslist.org/00808_6L83ShdXYi8_600x450.jpg',
+    price: '$180',
+    title: 'HUGE collection of MAD magazines',
+    url: 'https://boulder.craigslist.org/bks/d/huge-collection-of-mad/6549237162.html' },
+  { pid: '6561870154',
+    image: 'https://images.craigslist.org/00v0v_4je6zhUj4Kw_600x450.jpg',
+    price: '$20',
+    title: 'Assorted cookbooks',
+    url: 'https://denver.craigslist.org/bks/d/assorted-cookbooks/6561870154.html' },
+  { pid: '6558758078',
+    image: 'https://images.craigslist.org/00N0N_fqVOZMx15ND_600x450.jpg',
+    price: '$500',
+    title: 'Wizard of Oz 1900',
+    url: 'https://denver.craigslist.org/bks/d/wizard-of-oz-1900/6558758078.html' },
+  { pid: '6544000715',
+    image: 'https://images.craigslist.org/00F0F_5uo4sj1ebBV_600x450.jpg',
+    price: '$20',
+    title: 'Harry Potter Series and others',
+    url: 'https://boulder.craigslist.org/bks/d/harry-potter-series-and-others/6544000715.html' }
+]
 
-  const gameClient = new craigslist.Client({
-      city : 'boulder'
-    }),
-    gOptions = {
-      baseHost : '', // defaults to craigslist.org
-      category : 'vga', // defaults to sss (all)
-      city : '',
-      maxAsk : '200',
-      minAsk : '100'
-    };
-    const collectClient = new craigslist.Client({
-      city : 'boulder'
-    }),
-    cOptions = {
-      baseHost : '', // defaults to craigslist.org
-      category : 'cba', // defaults to sss (all)
-      city : '',
-      maxAsk : '200',
-      minAsk : '100'
-    };
+const vga =
+[
+  { pid: '6543770502',
+    image: 'https://images.craigslist.org/00G0G_ql9wjxSQko_600x450.jpg',
+    price: '$50$50',
+    title: 'XBox One controllersXbox One Controllers',
+    url: 'https://boulder.craigslist.org/vgm/d/xbox-one-controllers/6543770502.html' },
+  { pid: '6551390694',
+    image: 'https://images.craigslist.org/00C0C_1Qjf4l6vXzQ_600x450.jpg',
+    price: '$50',
+    title: 'The Elder Scrolls online Tameriel unlimited imperial edition Xbox one',
+    url: 'https://boulder.craigslist.org/vgm/d/the-elder-scrolls-online/6551390694.html' },
+  { pid: '6558281815',
+    image: 'https://images.craigslist.org/00h0h_9WB0OqAqMdU_600x450.jpg',
+    price: '$200',
+    title: 'Nintendo 3ds with free e-store (can download all games free) - 200$',
+    url: 'https://boulder.craigslist.org/vgm/d/nintendo-3ds-with-free-store/6558281815.html' },
+  { pid: '6540241809',
+    image: 'https://images.craigslist.org/00C0C_7IWh5M6Tp1T_600x450.jpg',
+    price: '$100',
+    title: 'Xbox original 2 controllers and 29 games',
+    url: 'https://boulder.craigslist.org/vgm/d/xbox-original-2-controllers/6540241809.html' },
+  { pid: '6564917572',
+    image: 'https://images.craigslist.org/00Q0Q_5iKdqSaSVAX_600x450.jpg',
+    price: '$160',
+    title: 'Xbox - Halo Edition Bundle w/controllers',
+    url: 'https://boulder.craigslist.org/vgm/d/xbox-halo-edition-bundle/6564917572.html' },
+  { pid: '6553241880',
+    image: 'https://images.craigslist.org/00v0v_heut6tu3Wx8_600x450.jpg',
+    price: '$25',
+    title: 'Final  Fantasy XIV online PS3  collectors edition',
+    url: 'https://boulder.craigslist.org/vgm/d/final-fantasy-xiv-online-ps3/6553241880.html' },
+  { pid: '6550056980',
+    image: 'https://images.craigslist.org/00r0r_67i7lnCmoym_600x450.jpg',
+    price: '$250',
+    title: '"New" Nintendo 3ds XL',
+    url: 'https://boulder.craigslist.org/vgm/d/new-nintendo-3ds-xl/6550056980.html' },
+  { pid: '6543913381',
+    image: 'https://images.craigslist.org/00x0x_grwGdDjCSfy_600x450.jpg',
+    price: '$65',
+    title: 'Mini Game Anniversary Edition',
+    url: 'https://boulder.craigslist.org/vgm/d/mini-game-anniversary-edition/6543913381.html' },
+  { pid: '6548622713',
+    image: 'https://images.craigslist.org/00i0i_97m3lUWz5ty_600x450.jpg',
+    price: '$250',
+    title: 'Xbox One with Kinect',
+    url: 'https://boulder.craigslist.org/vgm/d/xbox-one-with-kinect/6548622713.html' },
+  { pid: '6555650909',
+    image: 'https://images.craigslist.org/00W0W_nHkX73kOLd_600x450.jpg',
+    price: '$10',
+    title: 'Minecraft for PS4',
+    url: 'https://boulder.craigslist.org/vgm/d/minecraft-for-ps4/6555650909.html' },
+  { pid: '6554412391',
+    image: 'https://images.craigslist.org/00G0G_lurRboGUJtP_600x450.jpg',
+    price: '$35',
+    title: 'Fate Extella: The Umbral Star for Nintendo Switch',
+    url: 'https://boulder.craigslist.org/vgm/d/fate-extella-the-umbral-star/6554412391.html' },
+  { pid: '6560538897',
+    image: 'https://images.craigslist.org/00202_1KGldyPDH6z_600x450.jpg',
+    price: '$20',
+    title: 'DOOM VFR for PlayStation VR PSVR New Sealed',
+    url: 'https://boulder.craigslist.org/vgm/d/doom-vfr-for-playstation-vr/6560538897.html' },
+  { pid: '6555404384',
+    image: 'https://images.craigslist.org/00R0R_hYkwt3vH4gl_600x450.jpg',
+    price: '$40',
+    title: 'Zelda breath of the wild Wii',
+    url: 'https://boulder.craigslist.org/vgm/d/zelda-breath-of-the-wild-wii/6555404384.html' },
+  { pid: '6557128534',
+    image: 'https://images.craigslist.org/00J0J_8j7HdSuoM8H_600x450.jpg',
+    price: '$20',
+    title: 'Steelbook Indiebox PC Axiom Verge and Guacamelee DRM Free',
+    url: 'https://denver.craigslist.org/vgm/d/steelbook-indiebox-pc-axiom/6557128534.html' }
+]
 
-  // Deletes ALL existing entries
+const cba =
+[
+  { pid: '6537187289',
+    image: 'https://images.craigslist.org/00B0B_jY7PjoUs8CO_600x450.jpg',
+    price: '$25',
+    title: '2 - Halcyon Days Enamels',
+    url: 'https://boulder.craigslist.org/clt/d/2-halcyon-days-enamels/6537187289.html' },
+  { pid: '6556280240',
+    image: 'https://images.craigslist.org/01717_lRA9PvcBH2x_600x450.jpg',
+    price: '$500',
+    title: 'Vintage 1973 Pioneer Stereo Receiver Model # SX727',
+    url: 'https://boulder.craigslist.org/clt/d/vintage-1973-pioneer-stereo/6556280240.html' },
+  { pid: '6563797730',
+    image: 'https://images.craigslist.org/00d0d_drDXv9PsLmY_600x450.jpg',
+    price: '$55',
+    title: 'NEW Exclusive Limited Edition "APPLE DUMPLING" DOLL',
+    url: 'https://boulder.craigslist.org/clt/d/new-exclusive-limited-edition/6563797730.html' },
+  { pid: '6548400913',
+    image: 'https://images.craigslist.org/00101_5X918X9Kbl8_600x450.jpg',
+    price: '$240',
+    title: '***Armand De Brignac Champagne***',
+    url: 'https://boulder.craigslist.org/clt/d/armand-de-brignac-champagne/6548400913.html' },
+  { pid: '6532818848',
+    image: 'https://images.craigslist.org/00E0E_2l7vpTsxFpg_600x450.jpg',
+    price: '$15',
+    title: 'Vintage Natural Stone Trinket Boxes w/Inlay - India',
+    url: 'https://boulder.craigslist.org/clt/d/vintage-natural-stone-trinket/6532818848.html' },
+  { pid: '6563067973',
+    image: 'https://images.craigslist.org/00P0P_gEIbbd7tJeA_600x450.jpg',
+    price: '$50',
+    title: 'Rare Collectible Ninja Throwing Stars',
+    url: 'https://boulder.craigslist.org/clt/d/rare-collectible-ninja/6563067973.html' },
+  { pid: '6548358270',
+    image: 'https://images.craigslist.org/00U0U_dhoJdx5wakr_600x450.jpg',
+    price: '$20',
+    title: 'Vintage steel dump truck',
+    url: 'https://boulder.craigslist.org/clt/d/vintage-steel-dump-truck/6548358270.html' },
+  { pid: '6564563502',
+    image: 'https://images.craigslist.org/00x0x_rpNOXLBWpF_600x450.jpg',
+    price: '$220',
+    title: 'Large Prehnite Mineral Specimen - Museum Quality',
+    url: 'https://boulder.craigslist.org/clt/d/large-prehnite-mineral/6564563502.html' },
+  { pid: '6534978476',
+    image: 'https://images.craigslist.org/00M0M_1FEY8UUs9pe_600x450.jpg',
+    price: '$20',
+    title: 'Longaberger Shining Star Basket - 2001',
+    url: 'https://boulder.craigslist.org/clt/d/longaberger-shining-star/6534978476.html' },
+  { pid: '6541395420',
+    image: 'https://images.craigslist.org/00E0E_lLbsISYjIC2_600x450.jpg',
+    price: '$40',
+    title: 'Vintage Kitchen - Stainless Cannister Wall Set',
+    url: 'https://boulder.craigslist.org/clt/d/vintage-kitchen-stainless/6541395420.html' },
+  { pid: '6544245509',
+    image: 'https://images.craigslist.org/00Z0Z_3j2fL130dBX_600x450.jpg',
+    price: '$225',
+    title: 'Jack Daniels Collectables',
+    url: 'https://boulder.craigslist.org/clt/d/jack-daniels-collectables/6544245509.html' },
+  { pid: '6561956148',
+    image: 'https://images.craigslist.org/00e0e_oIpFFuWcma_600x450.jpg',
+    price: '$30',
+    title: 'Roll of 25 2007 P  Washington Presidential  $1 Coins - Uncirculated',
+    url: 'https://boulder.craigslist.org/clt/d/roll-ofwashington/6561956148.html' },
+  { pid: '6548164494',
+    image: 'https://images.craigslist.org/00N0N_447ihzUElU8_600x450.jpg',
+    price: '$145',
+    title: 'Vintage Wooden Banana Crate / Box - AMATO & SONS CO. DENVER, COLO.',
+    url: 'https://boulder.craigslist.org/clt/d/vintage-wooden-banana-crate/6548164494.html' },
+  { pid: '6561035913',
+    image: 'https://images.craigslist.org/00e0e_jECYYN0tqw3_600x450.jpg',
+    price: '$440',
+    title: 'Bar mirror from Conor O\'Neill\'s',
+    url: 'https://boulder.craigslist.org/clt/d/bar-mirror-from-conor-oneills/6561035913.html' },
+  { pid: '6540475282',
+    image: 'https://images.craigslist.org/00Q0Q_ld7cg5O40Wi_600x450.jpg',
+    price: '$249',
+    title: 'Vintage ventriloquist dummy',
+    url: 'https://boulder.craigslist.org/clt/d/vintage-ventriloquist-dummy/6540475282.html' },
+  { pid: '6560114187',
+    image: 'https://images.craigslist.org/00r0r_1SaWiontktu_600x450.jpg',
+    price: '$15',
+    title: 'Antique Aluminum Tea/Coffee Pots - L.F and C and Comet',
+    url: 'https://boulder.craigslist.org/clt/d/antique-aluminum-tea-coffee/6560114187.html' },
+  { pid: '6563897838',
+    image: 'https://images.craigslist.org/01212_ezgQX3FYYBT_600x450.jpg',
+    price: '$300',
+    title: 'Signed and framed Chicago Bears Mike Ditka Career stat. Jersey',
+    url: 'https://boulder.craigslist.org/clt/d/signed-and-framed-chicago/6563897838.html' },
+  { pid: '6541818592',
+    image: 'https://images.craigslist.org/00n0n_j3skOgUl4IK_600x450.jpg',
+    price: '$100',
+    title: '12 Star Wars Hamilton collection limited porcelain cards',
+    url: 'https://boulder.craigslist.org/clt/d/12-star-wars-hamilton/6541818592.html' },
+  { pid: '6562323850',
+    image: 'https://images.craigslist.org/00000_gFGZwigJk9e_600x450.jpg',
+    price: '$20',
+    title: 'Sports Trading Cards',
+    url: 'https://boulder.craigslist.org/clt/d/sports-trading-cards/6562323850.html' },
+  { pid: '6554495168',
+    image: 'https://images.craigslist.org/00s0s_jMf7gvZ8xPU_600x450.jpg',
+    price: '$227',
+    title: 'Larry Bird Framed Signed Picture Plaque',
+    url: 'https://boulder.craigslist.org/clt/d/larry-bird-framed-signed/6554495168.html' },
+  { pid: '6535184957',
+    image: 'https://images.craigslist.org/01212_3DPS5LHsWRU_600x450.jpg',
+    price: '$25',
+    title: '1977-78 Bronco\'s Collectibles - Tom Jackson, Craig Morton, Lyle Alzado',
+    url: 'https://boulder.craigslist.org/clt/d/broncos-collectibles-tom/6535184957.html' },
+  { pid: '6542496315',
+    image: 'https://images.craigslist.org/00p0p_4szhZxlTRzL_600x450.jpg',
+    price: '$25',
+    title: 'Stoli Bar Set',
+    url: 'https://boulder.craigslist.org/clt/d/stoli-bar-set/6542496315.html' },
+  { pid: '6564872750',
+    image: 'https://images.craigslist.org/00g0g_acAlme21KfP_600x450.jpg',
+    price: '$50',
+    title: 'Precious Moments Figurine 4003175 NEW',
+    url: 'https://boulder.craigslist.org/clt/d/precious-moments-figurinenew/6564872750.html' },
+  { pid: '6563954084',
+    image: 'https://images.craigslist.org/00H0H_lcmrUheK7DX_600x450.jpg',
+    price: '$300',
+    title: 'Mr peanut "peanut man" display statue',
+    url: 'https://boulder.craigslist.org/clt/d/mr-peanut-peanut-man-display/6563954084.html' },
+  { pid: '6546545702',
+    image: 'https://images.craigslist.org/00Z0Z_aou5u677MFB_600x450.jpg',
+    price: '$80',
+    title: 'Dairy Milk Cream Metal Can 5 Gallons',
+    url: 'https://boulder.craigslist.org/clt/d/dairy-milk-cream-metal-can-5/6546545702.html' }
+]
+
+
+exports.seed = function(knex) {
   return knex('products').del()
-    .then(function () {
-      return Promise.all([
-        antiqueClient
-          .search(options, '')
-          .then((result) => {
-              return knex('products').insert(
-                result.map((listing) => ({
-                  pid: listing.pid,
-                  hasPic: listing.hasPic,
-                  price: listing.price,
-                  title: listing.title,
-                  url: listing.url
-              })
-            )
-            )
-          }),
-          bookClient
-            .search(bOptions, '')
-            .then((result) => {
-                return knex('products').insert(
-                  result.map((listing) => ({
-                    pid: listing.pid,
-                    hasPic: listing.hasPic,
-                    price: listing.price,
-                    title: listing.title,
-                    url: listing.url
-                })
-              )
-              )
-            }),
-            gameClient
-              .search(gOptions, '')
-              .then((result) => {
-                  return knex('products').insert(
-                    result.map((listing) => ({
-                      pid: listing.pid,
-                      hasPic: listing.hasPic,
-                      price: listing.price,
-                      title: listing.title,
-                      url: listing.url
-                  })
-                )
-                )
-              }),
-              collectClient
-                .search(cOptions, '')
-                .then((result) => {
-                    return knex('products').insert(
-                      result.map((listing) => ({
-                        pid: listing.pid,
-                        hasPic: listing.hasPic,
-                        price: listing.price,
-                        title: listing.title,
-                        url: listing.url
-                    })
-                  )
-                  )
-                })
-      ])
-        .then(function() {
-          return knex.raw(`SELECT setval('products_id_seq', (SELECT MAX(id) FROM products));`)
-        });
-        // .catch((err) => console.log(err))
-      //with those results, create rows, or records
+    .then(() => {
+      return knex('products').insert(ata)
     })
-};
+    .then(() => {
+      return knex('products').insert(bka)
+    })
+    .then(() => {
+      return knex('products').insert(vga)
+    })
+    .then(() => {
+      return knex('products').insert(cba)
+    })
+    .then(() => {
+      return knex.raw("SELECT setval('products_id_seq', (SELECT MAX(id) FROM products))")
+    })
+}
