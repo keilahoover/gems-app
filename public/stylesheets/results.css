@@ -1,5 +1,14 @@
-/*Results Cards*/
-main {
+/* General Styles */
+html {
+  font-size: 10px;
+}
+
+body {
+  background-image: url("../images/result-bg.jpg");
+  background-repeat: repeat;
+}
+
+#results__main {
   max-width: 100%;
   color: black;
   display: flex;
@@ -9,32 +18,31 @@ main {
 }
 
 .h2-style {
-  font-size: 2.5rem;
-  color: #FFFFFF;
+  font-size: 3.3rem;
   width: 100%;
   padding-left: 1rem;
+  font-family: 'Shrikhand',cursive;
 }
-
 
 .card {
   background-color: #FBFAF8;
-  max-width: 22%;
+  width: 22%;
   margin: 3.3rem 1.2rem 1.2rem 1.2rem;
-  height: 36rem;
   display: flex;
   flex-direction: column;
   box-shadow: 2px 0 4px #a6a6a6;
 }
 
 .top-line {
-  background-size: cover;
-  background-repeat: no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.4);
-  color: #FBFAF8;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 15rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-img {
+  width: 61%;
+  border-radius: 1rem;
 }
 
 .bottom-line {
@@ -42,25 +50,22 @@ main {
   flex-direction: column;
   height: 24rem;
   margin: 0 1.4rem 0 1.4rem;
+  font-family: "Montserrat", sans-serif
 }
 
 .product-title {
   margin-top: 1.4rem;
   margin-bottom: .3rem;
+  font-weight: 600;
 }
 
 .product-price {
   margin-bottom: 1.7rem;
 }
 
-a {
-  word-wrap: break-word;
+#product-url {
+  color: #FFFFFF;
   text-decoration: none;
-  color: #8B8B8B;
-  background-color: #EFEFEF;
-  line-height: 1.5rem;
-  padding: .5rem 1.5rem .5rem .5rem;
-  margin-bottom: 1.7rem;
 }
 
 .product-url,

@@ -40,7 +40,7 @@ router.get('/:cat', (req, res, next) => {
           title = 'Video Games';
           break;
         case 'clt':
-          title = 'Collectables';
+          title = 'Collectibles';
           break;
         // default:
         //   'All Products'

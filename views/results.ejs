@@ -3,9 +3,9 @@
 
 <head>
   <% include ./head %>
-    <!-- <link rel="stylesheet" href="/stylesheets/homepage.css"> -->
     <script type="text/javascript" src='/js/wishlist-scripts.js'></script>
     <link rel="stylesheet" href="/stylesheets/results.css">
+    <link rel="stylesheet" href="/stylesheets/index.css" />
 </head>
 
 <body>
@@ -13,15 +13,18 @@
     <% include ./header %>
   </header>
 
-  <main role="main">
+  <main role="main" id="results__main">
+      <h2 class="h2-style"><%= title %></h2>
     <% for (let i = 0; i < allProducts.length; i++) { %>
       <article class="card">
-        <img src=<%=allProducts[i].image%> />
+        <div class="top-line">
+          <img class="product-img" src=<%=allProducts[i].image%> />
+        </div>
         <div class="bottom-line">
           <h3 class="product-title"><%=allProducts[i].title%></h3>
           <h4 class="product-price"><%=allProducts[i].price%></h4>
-          <button class="product-url"><a class="card-url" title="attachment-link" target="_blank" href="<%= allProducts[i].url %>">More details...</a></button>
-          <button class="wishlist-btn">Add to Wishlist</button>
+          <button class="product-url button" id="card-btn"><a id="product-url" title="attachment-link" target="_blank" href="<%= allProducts[i].url %>">More Details</a></button>
+          <button class="wishlist-btn button" id="card-btn">Add to Wishlist</button>
         </div>
       </article>
       <% } %>
