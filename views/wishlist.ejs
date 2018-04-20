@@ -14,15 +14,17 @@
     <% include ./header %>
   </header>
 
+
   <h1>Welcome!</h1>
+
   <div id='main-container'>
 
     <div class='menu' id='settings-container'>
-      <a href='index.html'>Home</a>
-      <!-- <a href=''><button type="submit" name="button">Categories</button></a> -->
-      <a href='#'>My settings</a>
-      <a href='#' id='logout-button'>Log out</a>
-      <button type="submit" name="button" id='delete-user'>Delete account</button>
+      <a href='index' class='settings__a'>HOME</a>
+      <a href='#' class='settings__a'>MY SETTINGS</a>
+      <a href='#' id='logout-button' class='settings__a'>LOG OUT</a>
+      <button type="submit" name="button" class='button' id='delete-user'>Delete Account</button>
+
     </div>
 
     <main role="main" id="results__main">
@@ -40,13 +42,13 @@
           </div>
         </article>
         <% } %>
-    </main>
-  </div>
+      </main>
+    </div>
 
 
-  <footer>
-    <% include ./footer %>
-  </footer>
-</body>
+    <footer>
+      <% include ./footer %>
+    </footer>
+  </body>
 
-</html>
+  </html>

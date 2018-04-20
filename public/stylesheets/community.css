@@ -1,0 +1,14 @@
+body {
+  background-image: url("../images/result-bg.jpg");
+  background-repeat: repeat;
+}
+
+.community__img {
+  border-radius: 2rem;
+}
+
+.community__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -14,7 +14,6 @@
   </header>
   <div id="upper">
 
-    <!-- BEGIN: THIS PART SHOULD ONLY SHOW UP WHEN **NOT** LOGGED IN -->
     <% if (typeof signinSuccess === "undefined") { %>
       <form class="form" method="POST" action="/">
         <div class="container">
@@ -35,27 +34,24 @@
         </div>
       </form>
     <% } %>
-    <!-- END: THIS PART SHOULD ONLY SHOW UP WHEN **NOT** LOGGED IN -->
 
-    <!-- BEGIN: THIS PART SHOULD ONLY SHOW UP **WHEN** LOGGED IN -->
     <% if (typeof signinSuccess !== "undefined") { %>
-      <a href="/wishlist">WISHLIST</a>
+      <button id="wishlist-btn"><a class="wishlist__a" href="/wishlist">WISHLIST</a></button>
     <% } %>
-    <!-- END: THIS PART SHOULD ONLY SHOW UP **WHEN** LOGGED IN -->
 
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <button class="nav"><a href= './results/atq'>&nbsp;&nbsp;&nbsp;</a> ANTIQUES</button>
+          <button class="nav"><a href="./results/atq" id="category-redirect">ANTIQUES</a></button>
         </div>
         <div class="col-md-3">
-          <button class="nav"><a href= './results/bks'>&nbsp;&nbsp;&nbsp;</a>BOOKS</button>
+          <button class="nav"><a href="./results/bks" id="category-redirect">BOOKS</a></button>
         </div>
         <div class="col-md-3">
-          <button class="nav"><a href= './results/clt'>&nbsp;&nbsp;&nbsp;</a>COLLECTIBLES</button>
+          <button class="nav"><a href="./results/clt" id="category-redirect">COLLECTIBLES</a></button>
         </div>
         <div class="col-md-3">
-          <button class="nav"><a href= './results/vgm'>&nbsp;&nbsp;&nbsp;</a>VIDEO GAMES</button>
+          <button class="nav"><a href="./results/vgm" id="category-redirect">VIDEO GAMES</a></button>
         </div>
       </div>
     </div>
