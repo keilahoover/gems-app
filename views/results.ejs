@@ -24,14 +24,10 @@
           <h3 class="product-title"><%=allProducts[i].title%></h3>
           <h4 class="product-price"><%=allProducts[i].price%></h4>
           <button class="product-url button" id="card-btn"><a id="product-url" title="attachment-link" target="_blank" href="<%= allProducts[i].url %>">More Details</a></button>
-          <button class="wishlist-btn button" id="card-btn">Add to Wishlist</button>
+          <button class="wishlist-btn button" id=<%=allProducts[i].id%>>Add to Wishlist</button>
         </div>
       </article>
       <% } %>
-
-  </main>
-
-
   </main>
   <footer>
     <% include ./footer %>

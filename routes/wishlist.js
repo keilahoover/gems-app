@@ -20,19 +20,32 @@ const authenticated = (req, res, next) => {
 }
 
 router.get('/', authenticated, (req, res, next) => {
-
-  // console.log(req.params);
   knex('wishlist')
   .join('products', 'wishlist.products_id', 'products.id')
   .select('*')
   .then((allItems) => {
-    res.render('wishlist', {title: 'Wishlist'})
-    allItems
-    // const camelized = allItems.map((entry) => humps.camelizeKeys(entry))
-    // res.json(camelized)
+    res.render('wishlist', {
+      title: 'Wishlist',
+      allItems
+    })
   })
   .catch((err) => console.log('err: ', err))
 });
+
+router.post('/', (req, res, next) => {
+  // const token = jwt.decode(req.cookies.token)
+  console.log('REQ BODY', req.body)
+
+  knex('wishlist')
+    .insert({
+      'user_id': req.body.user_id,
+      // replace with token later
+      // token.(key for user)
+      'products_id': req.body.products_id
+    })
+    .returning('*')
+    .then((newWish) => res.json(humps.camelizeKeys(newWish[0])))
+})
 
 router.delete('/', (req, res, next) => {
   knex('wishlist')

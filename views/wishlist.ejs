@@ -2,9 +2,11 @@
 <html lang='en'>
 
 <head>
-      <% include ./head %>
-<link rel='stylesheet' href='/stylesheets/wishlist.css' />
-  <script src = '/js/scripts.js'></script>
+  <% include ./head %>
+    <script type='text/javascript' src='/js/wishlist-scripts.js'></script>
+    <link rel='stylesheet' href='/stylesheets/wishlist.css' />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link rel="stylesheet" href="/stylesheets/results.css">
 </head>
 
 <body>
@@ -12,40 +14,33 @@
     <% include ./header %>
   </header>
 
-  <h1>Welcome, (User)</h1>
+  <h1>Welcome!</h1>
   <div id='main-container'>
 
     <div class='menu' id='settings-container'>
       <a href='index.html'>Home</a>
       <!-- <a href=''><button type="submit" name="button">Categories</button></a> -->
-      <a href=''>My settings</a>
-      <a href='' id='logout-button'>Log out</a>
+      <a href='#'>My settings</a>
+      <a href='#' id='logout-button'>Log out</a>
       <button type="submit" name="button" id='delete-user'>Delete account</button>
     </div>
 
-    <!-- <div id='item-container'>
-      <div class='card'>
-        <img src='https://vignette.wikia.nocookie.net/project-pokemon/images/4/47/Placeholder.png/revision/latest?cb=20170330235552&format=original' alt=''>
-        <p>product name</p>
-        <p>$$$</p>
-        <button type='button' name='button'>Add to cart</button>
-      </div>
-
-      <div class='card'>
-        <img src='https://vignette.wikia.nocookie.net/project-pokemon/images/4/47/Placeholder.png/revision/latest?cb=20170330235552&format=original' alt=''>
-        <p>product name</p>
-        <p>$$$</p>
-        <button type='button' name='button'>Add to cart</button>
-      </div>
-
-      <div class='card'>
-        <img src='https://vignette.wikia.nocookie.net/project-pokemon/images/4/47/Placeholder.png/revision/latest?cb=20170330235552&format=original' alt=''>
-        <p>product name</p>
-        <p>$$$</p>
-        <button type='button' name='button'>Add to cart</button>
-      </div>
-
-    </div> -->
+    <main role="main" id="results__main">
+        <h2 class="h2-style"><%= title %></h2>
+      <% for (let i = 0; i < allItems.length; i++) { %>
+        <article class="card">
+          <div class="top-line">
+            <img class="product-img" src=<%=allItems[i].image%> />
+          </div>
+          <div class="bottom-line">
+            <h3 class="product-title"><%=allItems[i].title%></h3>
+            <h4 class="product-price"><%=allItems[i].price%></h4>
+            <button class="product-url button" id="card-btn"><a id="product-url" title="attachment-link" target="_blank" href="<%= allItems[i].url %>">More Details</a></button>
+            <button class="wishlist-btn button" id=<%=allItems[i].id%>>Add to Wishlist</button>
+          </div>
+        </article>
+        <% } %>
+    </main>
   </div>
 
 
