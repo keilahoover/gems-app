@@ -12,6 +12,28 @@ button.nav{
   font-family: "Shrikhand", cursive;
 }
 
+#upper {
+  padding-left: 8px;
+  position: relative;
+  background-color: #241F24;
+}
+
+.wishlist__a {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+}
+
+#wishlist-btn {
+  position: absolute;
+  top: 36px;
+  font-family: "Shrikhand", cursive;
+}
+
+.wishlist__a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 button {
   background-color: #EA6446;
   border: none;
@@ -66,10 +88,6 @@ button:hover {
   padding-top: 2rem;
   font-size: 15px;
   margin-bottom: 2rem;
-}
-
-#upper{
-  background-color: #241F24;
 }
 
 .category__ul {

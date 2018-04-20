@@ -6,30 +6,34 @@ body {
   font-family: "Open-Sans", sans-serif;
 }
 
-#profile-img {
-  margin-left: 4rem;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us__h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  padding: 1rem;
+}
+
+#dev-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .description {
+  font-size: 1.7rem;
+  padding: 1rem 0 1.5rem;
   text-align: center;
 }
 
-.name {
-  text-align: center;
-}
-
-#bio{
-  margin-left: 20rem;
-  margin-bottom: 3rem;
-  margin-top: 3rem;
-}
-
-#about-us{
-  margin-left: 26.5rem;
-  margin-bottom: 3rem;
-  margin-top: 10rem;
-}
-
-.container{
-  margin-bottom: 10rem;
+.about-us__h2 {
+  font-size: 3rem;
+  padding: 1rem 0 1.5rem;
+  font-family: 'Montserrat',sans-serif;
 }
