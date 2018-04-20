@@ -20,16 +20,14 @@ const authenticated = (req, res, next) => {
 }
 
 router.get('/', authenticated, (req, res, next) => {
-
-  // console.log(req.params);
   knex('wishlist')
   .join('products', 'wishlist.products_id', 'products.id')
   .select('*')
   .then((allItems) => {
-    res.render('wishlist', {title: 'Wishlist'})
-    allItems
-    // const camelized = allItems.map((entry) => humps.camelizeKeys(entry))
-    // res.json(camelized)
+    res.render('wishlist', {
+      title: 'Wishlist',
+      allItems
+    })
   })
   .catch((err) => console.log('err: ', err))
 });

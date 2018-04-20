@@ -6,14 +6,16 @@ body {
   font-family: "Open-Sans", sans-serif;
 }
 
+.about-us__h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+}
+
 #profile-img {
   margin-left: 4rem;
 }
 
-.description {
-  text-align: center;
-}
-
+.description,
 .name {
   text-align: center;
 }
