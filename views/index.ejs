@@ -5,7 +5,7 @@
   <% include ./head %>
     <link rel="stylesheet" href="/stylesheets/carousel.css" />
     <link rel="stylesheet" href="/stylesheets/index.css" />
-    <script src = "/js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
 </head>
 
 <body>
@@ -16,45 +16,35 @@
 
     <% if (typeof signinSuccess === "undefined") { %>
       <form class="form" method="POST" action="/">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-              <input class="form-control" name="email" type="email" placeholder="Email" required />
+        <div class="sign-in-container">
+          <!-- <div class="row"> -->
+            <!-- <div class="col-md-4"> -->
+              <input class="email__input" name="email" type="email" placeholder="Email" required />
+            <!-- </div> -->
+            <!-- <div class="col-md-4"> -->
+              <input class="password__input" name="password" type="password" placeholder="Password" required />
+            <!-- </div> -->
+            <!-- <div class="col-md-2"> -->
+              <button type="submit" id="log-in">SIGN IN</button>
+            <!-- </div> -->
+            <!-- <div class="col-md-2"> -->
+              <button id="sign-up">SIGN UP</button>
             </div>
-            <div class="col-md-4">
-              <input class="form-control" name="password" type="password" placeholder="Password" required />
-            </div>
-            <div class="col-md-2">
-              <button type="submit" id="log-in">Log In</button>
-            </div>
-            <div class="col-md-2">
-              <button id="sign-up">Sign Up</button>
-            </div>
-          </div>
-        </div>
+          <!-- </div> -->
+        <!-- </div> -->
       </form>
-    <% } %>
+      <% } %>
 
-    <% if (typeof signinSuccess !== "undefined") { %>
-      <button id="wishlist-btn"><a class="wishlist__a" href="/wishlist">WISHLIST</a></button>
-    <% } %>
+        <% if (typeof signinSuccess !== "undefined") { %>
+          <button id="wishlist-btn"><a class="wishlist__a" href="/wishlist">WISHLIST</a></button>
+          <% } %>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <button class="nav"><a href="./results/atq" id="category-redirect">ANTIQUES</a></button>
-        </div>
-        <div class="col-md-3">
-          <button class="nav"><a href="./results/bks" id="category-redirect">BOOKS</a></button>
-        </div>
-        <div class="col-md-3">
-          <button class="nav"><a href="./results/clt" id="category-redirect">COLLECTIBLES</a></button>
-        </div>
-        <div class="col-md-3">
-          <button class="nav"><a href="./results/vgm" id="category-redirect">VIDEO GAMES</a></button>
-        </div>
-      </div>
-    </div>
+            <div class="nav-bar">
+              <button class="nav-bar__btn"><a href="./results/atq" id="category-redirect">ANTIQUES</a></button>
+              <button class="nav-bar__btn"><a href="./results/bks" id="category-redirect">BOOKS</a></button>
+              <button class="nav-bar__btn"><a href="./results/clt" id="category-redirect">COLLECTIBLES</a></button>
+              <button class="nav-bar__btn"><a href="./results/vgm" id="category-redirect">VIDEO GAMES</a></button>
+            </div>
   </div>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -101,39 +91,34 @@
       </div>
     </div>
   </div>
-    <div class="container marketing">
-  <main id="lower" role="main">
-    <div class="container">
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <h2>CATEGORIES</h2>
+  <div class="container marketing">
+    <main id="lower" role="main">
+      <div class="container">
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>CATEGORIES</h2>
             <div class="container">
               <ul class="category__ul">
-                <li><a href="./results/atq"  class="category__li">Antiques</a></li>
-                <li><a href="./results/bks"  class="category__li">Books</a></li>
-                <li><a href="./results/clt"  class="category__li">Collectibles</a></li>
-                <li><a href="./results/vgm"  class="category__li">Video Games</a></li>
+                <li><a href="./results/atq" class="category__li">Antiques</a></li>
+                <li><a href="./results/bks" class="category__li">Books</a></li>
+                <li><a href="./results/clt" class="category__li">Collectibles</a></li>
+                <li><a href="./results/vgm" class="category__li">Video Games</a></li>
               </ul>
-              </div>
+            </div>
           </div>
-
-        <!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <h2>ABOUT US</h2>
-          <p class="about-us__p"><a href="./about_us.html" target="_blank" class="community__a">Our Team</a></p>
+          <div class="col-lg-4">
+            <h2>ABOUT US</h2>
+            <p class="about-us__p"><a href="./about_us.html" target="_blank" class="community__a">Our Team</a></p>
+          </div>
+          <div class="col-lg-4">
+            <h2>COMMUNITY</h2>
+            <p class="community__p"><a href="../community.html" target="_blank" class="community__a">Coming Soon!</a></p>
+          </div>
         </div>
-        <!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <h2>COMMUNITY</h2>
-          <p class="community__p"><a href="../community.html" target="_blank" class="community__a">Coming Soon!</a></p>
-        </div>
-        <!-- /.col-lg-4 -->
       </div>
-    </div>
-      <!-- /.row -->
-  </main>
-</div>
+    </main>
+  </div>
 
   <footer>
     <% include ./footer %>
